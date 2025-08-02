@@ -1,3 +1,6 @@
+<?php
+require 'conexao.php';
+?>
 <!doctype html>
 <html lang="pt-BR">
 
@@ -19,7 +22,7 @@
           <div class="card-header">
             <h4>Lista de Usuários
               <a href="criar-usuario.php"
-                class="btn btn-primary float-end">
+                class="btn text-light float-end" style="background: cadetblue;">
                 Adicionar Usuário
               </a>
             </h4>
@@ -31,7 +34,7 @@
                   <th>ID</th>
                   <th>Nome</th>
                   <th>Email</th>
-                  <th>Data e nascimentos</th>
+                  <th>Data de nascimento</th>
                   <th>Ações</th>
                 </tr>
               </thead>
@@ -45,7 +48,7 @@
                     <a href="" class="btn btn-secondary btn-sm">Ver</a>
                     <a href="" class="btn btn-success btn-sm">Editar</a>
                     <form action="" method="POST" class="d-inline">
-                      <button type="submit"  name="excluir_usuario" 
+                      <button type="submit"  name="excluir-usuario" 
                       value="1" class="btn btn-danger btn-sm">
                         Excluir
                       </button>
