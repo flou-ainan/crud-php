@@ -1,4 +1,5 @@
-#### 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧 $\color{yELLOW}{AINDA\ EM\ DESENVOLVIMENTO}$
+<table><tr><td> 🚧 $\color{BROWN}{AINDA\ EM\ DESENVOLVIMENTO}$ 🚧</td></tr></table>
+
 # CRUD Básico com PHP e MySQL
 
 Este é um projeto de estudo para a criação de um CRUD (Create, Read, Update, Delete) básico, utilizando PHP puro e um banco de dados MySQL. O objetivo é praticar os conceitos fundamentais do desenvolvimento web back-end com PHP.
