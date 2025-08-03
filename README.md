@@ -1,6 +1,7 @@
+#### 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧 $\color{yELLOW}{AINDA\ EM\ DESENVOLVIMENTO}$
 # CRUD Básico com PHP e MySQL
 
-Este é um projeto de estudo para a criação de um CRUD (Create, Read, Update, Delete) básico, utilizando PHP puro e um banco de dados MySQL. O objetivo é praticar os conceitos fundamentais do desenvolvimento web back-end com PHP para o cadastro e remoção de usuários.
+Este é um projeto de estudo para a criação de um CRUD (Create, Read, Update, Delete) básico, utilizando PHP puro e um banco de dados MySQL. O objetivo é praticar os conceitos fundamentais do desenvolvimento web back-end com PHP.
 
 ## Funcionalidades
 
@@ -10,7 +11,6 @@ O projeto implementa as seguintes funcionalidades para o gerenciamento de usuár
 *   **Adicionar usuário:** Permite o cadastro de um novo usuário.
 *   **Remover usuário:** Permite a exclusão de um usuário existente.
 
-*(As funcionalidades de "Ver" e "Editar" estão com a interface preparada, mas a lógica ainda não foi implementada).*
 
 ## Tecnologias Utilizadas
 
@@ -27,14 +27,15 @@ O projeto implementa as seguintes funcionalidades para o gerenciamento de usuár
     ```
 
 2.  **Banco de Dados:**
-    *   Crie um banco de dados no seu servidor MySQL (ex: `crud_php`).
-    *   Crie uma tabela `usuarios`. Você pode usar o seguinte comando SQL:
+    *   Crie um banco de dados no seu servidor MySQL com o nome `php_crud`.
+    *   Crie a tabela `usuarios` dentro do banco de dados. Você pode usar o seguinte comando SQL:
       ```sql
       CREATE TABLE usuarios (
         id INT AUTO_INCREMENT PRIMARY KEY,
         nome VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL,
-        data_nascimento DATE NOT NULL
+        data_de_nascimento DATE NOT NULL,
+        senha VARCHAR(255) NOT NULL
       );
       ```
 
