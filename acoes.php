@@ -13,11 +13,11 @@ if (isset($_POST['criar_usuario'])) {
   mysqli_query($conexao, $sql_insereUsuario);
 
   if (mysqli_affected_rows($conexao) > 0) {
-    $_SESSION['[mensagem]'] = 'Usuário criado com sucesso';
+    $_SESSION['mensagem'] = 'Usuário criado com sucesso';
     header('Location: index.php');
     exit;
   } else {
-    $_SESSION['[mensagem]'] = 'Usuário não cadastrado';
+    $_SESSION['mensagem'] = 'Usuário não cadastrado';
     header('Location: index.php');
     exit;
   }

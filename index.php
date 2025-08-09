@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'conexao.php';
 ?>
 <!doctype html>
@@ -15,6 +16,7 @@ require 'conexao.php';
 <body>
   <?php include('navbar.php') ?>
   <div class="container mt-4">
+    <?php include('mensagem.php'); ?>
     <div class="row">
       <div class="col-md-12">
         <div class="card">
@@ -39,14 +41,26 @@ require 'conexao.php';
                 </tr>
               </thead>
               <tbody>
+                <?php 
+                  $sql_query = 'SELECT * FROM usuarios';
+                  $usuarios =mysqli_query($conexao, $sql_query);
+                  if (mysqli_num_rows($usuarios) > 0){
+                    foreach($usuarios as $usuario) {
+                      $data_formatada = date('d/m/Y', 
+                      strtotime($usuario['data_de_nascimento']));
+
+                      $ver_href = 'detalhes-do-usuario.php?id=' . $usuario['id'];
+                      $editar_href = 'editar-usuario.php?id=' . $usuario['id'];
+
+                ?>
                 <tr>
-                  <td>1</td>
-                  <td>teste</td>
-                  <td>teste@mail.doe</td>
-                  <td>01/01/2026</td>
+                  <td><?=$usuario['id']?></td>
+                  <td><?=$usuario['nome']?></td>
+                  <td><?=$usuario['email']?></td>
+                  <td><?=$data_formatada?></td>
                   <td>
-                    <a href="" class="btn btn-secondary btn-sm">Ver</a>
-                    <a href="" class="btn btn-success btn-sm">Editar</a>
+                    <a href="<?=$ver_href?>" class="btn btn-secondary btn-sm">Ver</a>
+                    <a href="<?=$editar_href?>" class="btn btn-success btn-sm">Editar</a>
                     <form action="" method="POST" class="d-inline">
                       <button type="submit"  name="excluir-usuario" 
                       value="1" class="btn btn-danger btn-sm">
@@ -55,6 +69,11 @@ require 'conexao.php';
                     </form>
                   </td>
                 </tr>
+                <?php
+                  }} else {
+                    echo '<h5>Nenhum usuário</h5>';   
+                  }
+                ?>
               </tbody>
             </table>
           </div>
