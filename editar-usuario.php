@@ -41,13 +41,14 @@ require 'conexao.php';
                   document.title = 'Usuários | Editando: <?= htmlspecialchars($usuario['nome']) ?>';
                 </script>
                 <form action="acoes.php" method="POST">
+                  <input type="hidden" name="id_do_usuario" value="<?=$usuario['id']?>">
                   <div class="mb-3">
                     <label>Nome</label>
-                    <input type="text" name="nome" class="form-control" placeholder="<?=$usuario["nome"]?>">
+                    <input type="text" name="nome" class="form-control" value="<?=$usuario["nome"]?>">
                   </div>
                   <div class="mb-3">
                     <label>Email</label>
-                    <input type="text" name="email" class="form-control" placeholder="<?=$usuario["email"]?>">
+                    <input type="text" name="email" class="form-control" value="<?=$usuario["email"]?>">
                   </div>
                   <div class="mb-3">
                     <label>Data de nascimento</label>
