@@ -1,7 +1,7 @@
 <?php 
 define('HOST', 'localhost');
-define('USUARIO', 'root');
-define('SENHA', '');
+define('USUARIO', 'phpcrud');
+define('SENHA', '2323');
 define('DB', 'php_crud');
 define('PORT', '3306');
 
