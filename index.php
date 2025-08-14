@@ -11,6 +11,12 @@ require 'conexao.php';
   <title>Usuários</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <script>
+    function lidaComExclusao(id){
+      return confirm(`Tem certeza que deseja excluir o usuário ${id}`)
+    }
+  </script>
 </head>
 
 <body>
@@ -59,12 +65,16 @@ require 'conexao.php';
                   <td><?=$usuario['email']?></td>
                   <td><?=$data_formatada?></td>
                   <td>
-                    <a href="<?=$ver_href?>" class="btn btn-secondary btn-sm">Ver</a>
-                    <a href="<?=$editar_href?>" class="btn btn-success btn-sm">Editar</a>
-                    <form action="" method="POST" class="d-inline">
-                      <button type="submit"  name="excluir-usuario" 
-                      value="1" class="btn btn-danger btn-sm">
-                        Excluir
+                    <a href="<?=$ver_href?>" class="btn btn-secondary btn-sm">
+                      <span class="bi-eye-fill"></span>
+                    </a>
+                    <a href="<?=$editar_href?>" class="btn btn-success btn-sm">
+                      <span class="bi-pencil-fill"></span>
+                    </a>
+                    <form action="acoes.php" method="POST" class="d-inline">
+                      <button onclick="return lidaComExclusao('<?=$usuario['id']?>')" type="submit"  name="excluir_usuario" 
+                      value=<?=$usuario['id']?> class="btn btn-danger btn-sm">
+                        <span class="bi-trash3-fill"></span>
                       </button>
                     </form>
                   </td>

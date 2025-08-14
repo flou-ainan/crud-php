@@ -50,4 +50,22 @@ if (isset($_POST['editar_usuario'])) {
     exit;
   }
 }
+
+// Rota para exclusão de usuários
+if (isset($_POST['excluir_usuario'])) {
+  $id_do_usuario = mysqli_real_escape_string($conexao, $_POST['excluir_usuario']);
+  $query_sql = "DELETE FROM usuarios WHERE id = '$id_do_usuario'";
+
+  mysqli_query($conexao, $query_sql);
+
+  if(mysqli_affected_rows($conexao) > 0) {
+    $_SESSION['message'] = 'Usuário removido com sucesso';
+    header('Location: index.php');
+    exit;
+  }else{
+    $_SESSION['message'] = 'Erro ao tentar remover usuário';
+    header('Location: index.php');
+    exit;
+  }
+}
 ?>

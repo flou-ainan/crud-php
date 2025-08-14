@@ -54,10 +54,13 @@ require 'conexao.php';
                     <label>Data de nascimento</label>
                     <input type="date" name="data_de_nascimento" class="form-control" value="<?=$usuario["data_de_nascimento"]?>">
                   </div>
-                  <div class="mb-3">
-                    <label>Senha</label>
-                    <input type="password" name="senha" class="form-control" placeholder="●●●●">
-                  </div>
+                  <details>
+                    <summary>Alterar senha?</summary>
+                    <div class="mb-3">
+                      <label>Senha</label>
+                      <input type="password" name="senha" class="form-control" placeholder="●●●●">
+                    </div>
+                  </details>
                   <div class="mb-3">
                     <button type="submit" name="editar_usuario"
                       class="btn btn-success mx-auto d-block px-4 text-center">Confirmar Mudanças</button>
