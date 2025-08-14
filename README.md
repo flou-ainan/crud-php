@@ -4,6 +4,10 @@
 
 Este é um projeto de estudo para a criação de um CRUD (Create, Read, Update, Delete) básico, utilizando PHP puro e um banco de dados MySQL. O objetivo é praticar os conceitos fundamentais do desenvolvimento web back-end com PHP.
 
+## Demo Online
+[**Acessar**](http://aphpcrud.atwebpages.com/)
+[![Screenshot](./screenshot.jpeg)](http://aphpcrud.atwebpages.com/)
+
 ## Funcionalidades
 
 O projeto implementa as seguintes funcionalidades para o gerenciamento de usuários:
